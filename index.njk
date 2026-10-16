@@ -1,0 +1,22 @@
+---
+layout: base.njk
+---
+<section class="intro">
+  <h1>Things I'm building</h1>
+  <p>I'm Tim, a software engineer in London. I build tools for AI agents, research experiments on how language models behave, and the occasional synth module. These are write-ups of projects once they're done.</p>
+</section>
+
+<ol class="post-list">
+{% for post in collections.posts | reverse %}
+  <li>
+    <a class="post-card" href="{{ post.url }}">
+      <div class="post-card-text">
+        <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+        <h2>{{ post.data.title }}</h2>
+        {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
+      </div>
+      {% set thumb = post.data.thumb or post.data.image %}{% if thumb %}<img class="thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}
+    </a>
+  </li>
+{% endfor %}
+</ol>

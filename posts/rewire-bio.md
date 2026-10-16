@@ -39,4 +39,4 @@ When I find a mistake, the correction is published next to the original. The MFA
 
 ## Tools for agents
 
-Two MCP servers came out of this work. [genomics-mcp](https://github.com/rewire-bio/genomics-mcp) lets an AI assistant find public genomic datasets, read a bounded region from archive or local files, and look up variants and genes, with the source of every result. [rdf-kg-mcp](https://github.com/rewire-bio/rdf-kg-mcp) serves a versioned RDF knowledge graph read-only, which is how the benchmark database is exposed to agents.
+Two MCP servers came out of this work. [genomics-mcp](/genomics-mcp/) lets an AI assistant find public genomic datasets, read a bounded region from archive or local files, and look up variants and genes, with the source of every result. [rdf-kg-mcp](https://github.com/rewire-bio/rdf-kg-mcp) serves a versioned RDF knowledge graph read-only, which is how the benchmark database is exposed to agents.

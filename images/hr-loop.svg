@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="100%" style="background:#ffffff" role="img" aria-label="Harness Retro loop: mine transcripts locally, then Claude groups patterns, checks the harness and proposes fixes for approval">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6e6a63"/>
+    </marker>
+    <style>
+      text{font-family:Inter,system-ui,-apple-system,sans-serif;fill:#1c1b19}
+      .t{font-size:15px;font-weight:600}
+      .s{font-size:12.5px;fill:#6e6a63}
+      .lane{font-size:12px;font-weight:600;letter-spacing:.08em;fill:#6e6a63}
+      .box{fill:#f2efe8;stroke:#d8d3c8;stroke-width:1}
+      .hot{fill:#e8eef9;stroke:#b9c8e6;stroke-width:1}
+      .store{fill:#ffffff;stroke:#2451a6;stroke-width:1.5}
+      .e{stroke:#6e6a63;stroke-width:1.4;fill:none;marker-end:url(#a)}
+      .d{stroke:#6e6a63;stroke-width:1.4;fill:none;stroke-dasharray:4 4;marker-end:url(#a)}
+    </style>
+  </defs>
+
+  <text class="lane" x="40" y="34">ON YOUR MACHINE: NO MODEL CALLS</text>
+  <text class="lane" x="876" y="250" text-anchor="end">IN CLAUDE: NOTHING CHANGES WITHOUT YOUR SAY-SO</text>
+  <line x1="40" y1="214" x2="876" y2="214" stroke="#e6e2da"/>
+
+  <rect class="store" x="40" y="54" width="200" height="104" rx="8"/>
+  <text class="t" x="56" y="82">Transcripts</text>
+  <text class="s" x="56" y="104">~/.claude/projects,</text>
+  <text class="s" x="56" y="120">one JSONL file per session.</text>
+  <text class="s" x="56" y="144">Often hundreds of MB</text>
+
+  <rect class="hot" x="358" y="54" width="200" height="104" rx="8"/>
+  <text class="t" x="374" y="82">mine.py</text>
+  <text class="s" x="374" y="104">Flags corrections, interrupts,</text>
+  <text class="s" x="374" y="120">error streaks, edit churn,</text>
+  <text class="s" x="374" y="136">denials. Redacts keys.</text>
+
+  <rect class="box" x="676" y="54" width="200" height="104" rx="8"/>
+  <text class="t" x="692" y="82">Ranked summary</text>
+  <text class="s" x="692" y="104">Excerpts with the prompt,</text>
+  <text class="s" x="692" y="120">Claude's last actions and</text>
+  <text class="s" x="692" y="136">your reaction. Under 40 KB</text>
+
+  <path class="e" d="M240,106 L356,106"/>
+  <path class="e" d="M558,106 L674,106"/>
+
+  <rect class="hot" x="40" y="266" width="190" height="100" rx="8"/>
+  <text class="t" x="56" y="294">Group patterns</text>
+  <text class="s" x="56" y="316">Drop false positives,</text>
+  <text class="s" x="56" y="332">find the root cause.</text>
+
+  <rect class="box" x="252" y="266" width="190" height="100" rx="8"/>
+  <text class="t" x="268" y="294">Check the harness</text>
+  <text class="s" x="268" y="316">CLAUDE.md, memory,</text>
+  <text class="s" x="268" y="332">settings, skills.</text>
+
+  <rect class="box" x="464" y="266" width="190" height="100" rx="8"/>
+  <text class="t" x="480" y="294">Propose fixes</text>
+  <text class="s" x="480" y="316">Lightest that works: memory,</text>
+  <text class="s" x="480" y="332">rule, hook or skill.</text>
+
+  <rect class="store" x="686" y="266" width="190" height="100" rx="8"/>
+  <text class="t" x="702" y="294">You approve</text>
+  <text class="s" x="702" y="316">Evidence and exact diff</text>
+  <text class="s" x="702" y="332">per pattern. Then apply.</text>
+
+  <path class="e" d="M776,158 L776,226 L135,226 L135,264"/>
+  <path class="e" d="M230,316 L250,316"/>
+  <path class="e" d="M442,316 L462,316"/>
+  <path class="e" d="M654,316 L684,316"/>
+
+  <path class="d" d="M781,366 L781,412 L18,412 L18,106 L38,106"/>
+  <text class="s" x="300" y="430">next sessions start with the fix in place</text>
+</svg>

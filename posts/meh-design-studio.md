@@ -7,6 +7,8 @@ summary: Tools for designing multiple entry horn speakers from cheap drivers, si
 image: /images/meh-240-prototype.png
 imageAlt: "Rear of the R1 prototype horn: four mid-driver mounts, the throat flange and the seams between printed sections"
 links:
+  - label: "Project site"
+    url: "https://timini.github.io/meh-design-studio/"
   - label: "Repository"
     url: "https://github.com/timini/meh-design-studio"
 ---

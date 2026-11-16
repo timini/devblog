@@ -1,6 +1,8 @@
 ---
 title: "Ensemble: asking several models and checking where they agree"
 date: 2026-03-25
+kind: "Web app"
+status: "Live"
 summary: A web app that sends one prompt to models from OpenAI, Anthropic, Google and xAI, measures how much their answers agree, and combines them, plus an experiment on whether ensembles beat the best single model.
 image: /images/ens-review.png
 imageAlt: "The review step in the design: a combined answer, agreement between models, and each model's response below"

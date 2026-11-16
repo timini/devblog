@@ -1,10 +1,14 @@
 ---
 title: "Harness Retro: a retrospective for Claude Code"
 date: 2026-11-03
+kind: "Claude Code plugin"
+status: "Released"
 summary: A Claude Code plugin that reads your past sessions, finds where Claude kept getting it wrong, and proposes changes to CLAUDE.md, memory, hooks and skills so it stops.
 image: /images/hr-loop.svg
 imageAlt: "Transcripts are mined locally into a short ranked summary. Claude groups the hits into patterns, checks the existing setup, and proposes fixes for you to approve."
 links:
+  - label: "Release v0.1.0"
+    url: "https://github.com/timini/harness-retro/releases/tag/v0.1.0"
   - label: "Repository"
     url: "https://github.com/timini/harness-retro"
 ---

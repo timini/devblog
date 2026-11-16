@@ -1,9 +1,19 @@
 ---
 layout: base.njk
 ---
+{% set total = collections.posts | length %}
+{% set counts = { "Live": 0, "Released": 0, "Working": 0, "Prototype": 0 } %}
 <section class="intro">
-  <h1>Things I'm building</h1>
-  <p>I'm Tim, a software engineer in London. I build tools for AI agents, research experiments on how language models behave, and the occasional synth module. These are write-ups of projects once they're done.</p>
+  <p class="eyebrow">Inventory</p>
+  <h1>Tim's Software Factory</h1>
+  <p>Everything that has come off the line so far: tools for AI agents, experiments on how language models behave, loudspeaker design, synth modules and the odd product. Each entry is a write-up with its source code and, where there is one, the running thing.</p>
+  <ul class="stock">
+    <li><strong>{{ total }}</strong> items</li>
+    {% for status in ["Live", "Released", "Working", "Prototype"] %}
+    {% set n = 0 %}{% for post in collections.posts %}{% if post.data.status == status %}{% set n = n + 1 %}{% endif %}{% endfor %}
+    {% if n > 0 %}<li><span class="status status-{{ status | slug }}">{{ status }}</span> {{ n }}</li>{% endif %}
+    {% endfor %}
+  </ul>
 </section>
 
 <ol class="post-list">
@@ -11,9 +21,14 @@ layout: base.njk
   <li>
     <a class="post-card" href="{{ post.url }}">
       <div class="post-card-text">
-        <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+        <p class="tag-line">
+          <span class="inv">No. {{ (total - loop.index0) | pad3 }}</span>
+          {% if post.data.kind %}<span>{{ post.data.kind }}</span>{% endif %}
+          {% if post.data.status %}<span class="status status-{{ post.data.status | slug }}">{{ post.data.status }}</span>{% endif %}
+        </p>
         <h2>{{ post.data.title }}</h2>
         {% if post.data.summary %}<p>{{ post.data.summary }}</p>{% endif %}
+        <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
       </div>
       {% set thumb = post.data.thumb or post.data.image %}{% if thumb %}<img class="thumb" src="{{ thumb }}" alt="" loading="lazy">{% endif %}
     </a>

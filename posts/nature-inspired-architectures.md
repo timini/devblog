@@ -1,10 +1,14 @@
 ---
 title: Software patterns from biology
 date: 2026-10-13
+kind: "Pattern catalogue"
+status: "Live"
 summary: A catalogue of eight biological coordination mechanisms translated into software patterns, each with citations, diagrams and runnable Python.
 image: /images/nia-feedback.svg
 imageAlt: "The integral feedback pattern"
 links:
+  - label: "Browse the catalogue"
+    url: "https://timini.github.io/nature-inspired-architectures/"
   - label: "Pattern catalogue"
     url: "https://github.com/timini/nature-inspired-architectures#pattern-catalogue"
   - label: "Repository"

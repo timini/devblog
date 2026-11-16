@@ -1,6 +1,8 @@
 ---
 title: "Agentic Verification: checking whether tests would catch a bug"
 date: 2026-10-16
+kind: "Claude Code plugin"
+status: "Released"
 summary: A Claude Code plugin that audits a pytest suite for untested behaviour, flaky tests and misleading coverage, with a pre-registered study behind it.
 image: /images/av-h1-scatter.png
 imageAlt: "Tests that run nearly the same lines (blue, coverage Jaccard 0.9 or more) still often catch different mutants"

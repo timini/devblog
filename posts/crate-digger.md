@@ -1,6 +1,8 @@
 ---
 title: "Crate Digger: a queue of new music for DJs"
 date: 2026-09-24
+kind: "Desktop app"
+status: "Working"
 summary: A local-first desktop app that finds tracks through Discogs, tracklists and the web, downloads them from Soulseek, analyses the audio and ranks everything by your own ratings.
 image: /images/cd-review.png
 imageAlt: "The review screen: a track playing, rating keys, why it was suggested and the evidence behind it"

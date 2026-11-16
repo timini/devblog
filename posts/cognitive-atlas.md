@@ -1,6 +1,8 @@
 ---
 title: "Cognitive Atlas: the map inside a language model's distance estimates"
 date: 2026-09-09
+kind: "Research"
+status: "Live"
 summary: I asked a model for the distance between every pair of 100 capitals, in three languages, and rebuilt the world map its answers imply.
 image: /images/atlas-site.jpg
 imageAlt: "The live atlas: capitals placed where the model's distance estimates put them"

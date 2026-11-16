@@ -1,6 +1,8 @@
 ---
 title: "Talk Trainer: learning a talk from the slides, not the script"
 date: 2026-11-15
+kind: "Web app"
+status: "Live"
 summary: An app that voices your speaker notes, then trains you to say each slide from memory while the words fade, with a model judging every attempt. Built for one real talk, now being turned into a product.
 image: /images/tt-home.jpg
 imageAlt: "The product's home page: a slide card with most words reduced to first letters, and the judge's note on what was missed"

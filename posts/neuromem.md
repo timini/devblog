@@ -1,6 +1,8 @@
 ---
 title: "Neuromem: long-term memory for AI agents, modelled on sleep"
 date: 2026-04-16
+kind: "Library"
+status: "Working"
 summary: A Python library that captures what an agent hears, consolidates it into a concept tree in background "dream" cycles, and lets the agent search it without any extra model calls.
 image: /images/neuromem-loop.svg
 imageAlt: "Turns are captured as they happen, consolidated in the background, and retrieved without model calls"

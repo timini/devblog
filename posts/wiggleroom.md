@@ -1,6 +1,8 @@
 ---
 title: "Wiggle Room: 45 modules for VCV Rack"
 date: 2026-09-23
+kind: "Synth modules"
+status: "Released"
 summary: A collection of physical-modelling synths, effects, sequencers and utilities for the VCV Rack modular synth, mostly built with Faust.
 image: /images/wr-panels.jpg
 imageAlt: "Panels from eight of the modules"

@@ -1,6 +1,8 @@
 ---
 title: "Rewire Bio: which biological model should you use?"
 date: 2026-10-16
+kind: "Database"
+status: "Live"
 summary: A benchmark database, open benchmarks and articles on machine learning in genomics, proteins and drug discovery, all linked to their evidence.
 image: /images/rewire-benchmarks.jpg
 imageAlt: "The benchmark database: start from a biological question, a model or a benchmark"

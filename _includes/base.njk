@@ -13,7 +13,7 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} | {% endif %}Tim Richardson</title>
+  <title>{% if title %}{{ title }} | {% endif %}Tim's Software Factory</title>
   {% if summary %}<meta name="description" content="{{ summary }}">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,8 +22,9 @@
 </head>
 <body>
   <header class="site-header">
-    <a href="/" class="site-name">Tim Richardson</a>
+    <a href="/" class="site-name"><span class="mark">TSF</span> Tim's Software Factory</a>
     <nav>
+      <a href="/">Inventory</a>
       <a href="https://github.com/timini">GitHub</a>
     </nav>
   </header>
@@ -31,7 +32,7 @@
     {{ content | safe }}
   </main>
   <footer class="site-footer">
-    <p>Tim Richardson, London</p>
+    <p>Tim's Software Factory. Built and run by Tim Richardson in London.</p>
   </footer>
 </body>
 </html>

@@ -1,6 +1,8 @@
 ---
 title: "MEH Design Studio: 3D-printable multiple entry horns"
 date: 2026-09-15
+kind: "Design tool"
+status: "Working"
 summary: Tools for designing multiple entry horn speakers from cheap drivers, simulating them with coupled FEM/BEM, and exporting parts sized for a home 3D printer.
 image: /images/meh-240-prototype.png
 imageAlt: "Rear of the R1 prototype horn: four mid-driver mounts, the throat flange and the seams between printed sections"

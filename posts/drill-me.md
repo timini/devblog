@@ -1,6 +1,8 @@
 ---
 title: "drill-me: a Claude Code tutor that quizzes you"
 date: 2026-09-23
+kind: "Claude Code plugin"
+status: "Released"
 summary: A plugin that turns Claude into a tutor with spaced repetition and a memory of what you got wrong. Version 1.0.1 is out.
 image: /images/drill-session.png
 imageAlt: "A session: Claude asks before it explains, then checks how confident you are"

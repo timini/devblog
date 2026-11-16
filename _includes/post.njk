@@ -3,7 +3,13 @@ layout: base.njk
 ---
 <article class="post">
   <header class="post-header">
-    <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+    {% set invNo = 0 %}{% for item in collections.posts %}{% if item.url == page.url %}{% set invNo = loop.index %}{% endif %}{% endfor %}
+    <p class="tag-line">
+      <span class="inv">No. {{ invNo | pad3 }}</span>
+      {% if kind %}<span>{{ kind }}</span>{% endif %}
+      {% if status %}<span class="status status-{{ status | slug }}">{{ status }}</span>{% endif %}
+      <time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>
+    </p>
     <h1>{{ title }}</h1>
     {% if summary %}<p class="lede">{{ summary }}</p>{% endif %}
     {% if links %}
@@ -21,5 +27,5 @@ layout: base.njk
   <div class="prose">
     {{ content | safe }}
   </div>
-  <p class="back"><a href="/">All posts</a></p>
+  <p class="back"><a href="/">Back to the inventory</a></p>
 </article>

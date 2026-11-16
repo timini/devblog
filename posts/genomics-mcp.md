@@ -1,6 +1,8 @@
 ---
 title: "Genomics MCP: real genomic data for AI agents, with sources"
 date: 2026-09-25
+kind: "MCP server"
+status: "Released"
 summary: An MCP server that lets an agent find public genomic datasets, read a bounded region of a file without downloading it, and look up variants and genes, recording where every value came from.
 image: /images/gmcp-bcl11a.png
 imageAlt: "BCL11A +58 enhancer signal in 26 ENCODE DNase-seq files, gathered by Claude using only the server's tools"

@@ -1,10 +1,14 @@
 ---
 title: "Horn Simulation: from a frequency band to a horn you can build"
 date: 2026-09-10
+kind: "Design pipeline"
+status: "Working"
 summary: A pipeline that generates horn loudspeaker geometries, solves them with FEM, couples the results to real drivers and ranks the combinations for a target band.
 image: /images/hs-horn-render.png
 imageAlt: "The selected horn for the 18Sound 6NMB420, drawn from the design's exported profile"
 links:
+  - label: "Example designs"
+    url: "https://timini.github.io/horn-simulation/"
   - label: "Repository"
     url: "https://github.com/timini/horn-simulation"
   - label: "Design examples"

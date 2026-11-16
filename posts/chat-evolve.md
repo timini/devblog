@@ -1,6 +1,8 @@
 ---
 title: "ChatEvolve: breeding text instead of prompting for it"
 date: 2026-11-15
+kind: "Web app"
+status: "Prototype"
 summary: An interface where you pick sentences to keep or cut across three drafts and breed the next round, instead of writing instructions. The interface works; the breeding step does not call a model yet.
 image: /images/ce-workbench.jpg
 imageAlt: "The workbench: three variants, with kept sentences in green and cut sentences in red, and the gene pools on the right"

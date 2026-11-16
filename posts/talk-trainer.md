@@ -5,6 +5,8 @@ summary: An app that voices your speaker notes, then trains you to say each slid
 image: /images/tt-home.jpg
 imageAlt: "The product's home page: a slide card with most words reduced to first letters, and the judge's note on what was missed"
 links:
+  - label: "Live app"
+    url: "https://talk-trainer-prod-d8d5.web.app"
   - label: "Prototype repository"
     url: "https://github.com/timini/talk-trainer"
 ---
@@ -44,4 +46,4 @@ The prototype ran on Cloudflare Workers and was built for one user. The product 
 
 The plan is a free tier with one short talk, $29 for a single talk and $19 a month for regular speakers, priced from the measured cost of about $0.65 per judged hour.
 
-It is not deployed yet. The engine, judge, billing, data layer and web app are built, with more than 260 tests. Next come fixing the last failing tests, a domain and a first staging deploy.
+A first version is live. The engine, judge, billing, data layer and web app are built, with more than 260 tests. Next come fixing the last failing tests and a proper domain.

@@ -5,8 +5,9 @@ layout: base.njk
 {% set counts = { "Live": 0, "Released": 0, "Working": 0, "Prototype": 0 } %}
 <section class="intro">
   <p class="eyebrow">Inventory</p>
-  <h1>Tim's Software Factory</h1>
-  <p>Everything that has come off the line so far: tools for AI agents, experiments on how language models behave, loudspeaker design, synth modules and the odd product. Each entry is a write-up with its source code and, where there is one, the running thing.</p>
+  <h1>Tim's Software Manufactory</h1>
+  <p>A manufactory is the stage between the craftsman's workshop and the factory: too much output for a cottage industry, still nowhere near a production line. That is about where this sits. One person sets the work and checks it, and coding agents do a good share of the making.</p>
+  <p>This is the stock so far: tools for AI agents, experiments on how language models behave, loudspeaker design, synth modules and the odd product. Each entry has its source code and, where there is one, the running thing.</p>
   <ul class="stock">
     <li><strong>{{ total }}</strong> items</li>
     {% for status in ["Live", "Released", "Working", "Prototype"] %}

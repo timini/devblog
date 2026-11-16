@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="100%" style="background:#ffffff" role="img" aria-label="Personal Assistant layers: skills in Claude Code or Codex call small command-line tools, which talk to Notion, Google and Garmin; personal context stays in ignored files">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6e6a63"/>
+    </marker>
+    <style>
+      text{font-family:Inter,system-ui,-apple-system,sans-serif;fill:#1c1b19}
+      .t{font-size:15px;font-weight:600}
+      .s{font-size:12.5px;fill:#6e6a63}
+      .m{font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-size:12.5px;fill:#1c1b19}
+      .lane{font-size:12px;font-weight:600;letter-spacing:.08em;fill:#6e6a63}
+      .box{fill:#f2efe8;stroke:#d8d3c8;stroke-width:1}
+      .hot{fill:#e8eef9;stroke:#b9c8e6;stroke-width:1}
+      .store{fill:#ffffff;stroke:#2451a6;stroke-width:1.5}
+      .priv{fill:#ffffff;stroke:#6e6a63;stroke-width:1.2;stroke-dasharray:5 4}
+      .e{stroke:#6e6a63;stroke-width:1.4;fill:none;marker-end:url(#a)}
+    </style>
+  </defs>
+
+  <text class="lane" x="40" y="34">THE AGENT</text>
+  <text class="lane" x="340" y="34">COMMAND-LINE TOOLS</text>
+  <text class="lane" x="640" y="34">YOUR SERVICES</text>
+
+  <rect class="box" x="40" y="50" width="240" height="250" rx="8"/>
+  <text class="t" x="56" y="78">Claude Code or Codex</text>
+  <text class="s" x="56" y="100">Skills describe the routines:</text>
+  <text class="m" x="56" y="130">daily-checkin</text>
+  <text class="m" x="56" y="152">email-triage</text>
+  <text class="m" x="56" y="174">task-hygiene</text>
+  <text class="m" x="56" y="196">research-doc</text>
+  <text class="m" x="56" y="218">personal-trainer</text>
+  <text class="m" x="56" y="240">visual-report</text>
+  <text class="s" x="56" y="276">Each session starts with</text>
+  <text class="m" x="56" y="292">pa-core memory brief</text>
+
+  <rect class="hot" x="340" y="50" width="240" height="56" rx="8"/>
+  <text class="m" x="356" y="74">pa-core</text>
+  <text class="s" x="356" y="94">memory, check-in, briefing, log</text>
+  <rect class="hot" x="340" y="116" width="240" height="56" rx="8"/>
+  <text class="m" x="356" y="140">pa-notion</text>
+  <text class="s" x="356" y="160">list, add and update tasks</text>
+  <rect class="hot" x="340" y="182" width="240" height="56" rx="8"/>
+  <text class="m" x="356" y="206">pa-google</text>
+  <text class="s" x="356" y="226">mail, calendar, Drive backup</text>
+  <rect class="hot" x="340" y="248" width="240" height="56" rx="8"/>
+  <text class="m" x="356" y="272">pa-health</text>
+  <text class="s" x="356" y="292">sleep, HRV and training log</text>
+
+  <rect class="store" x="640" y="116" width="220" height="56" rx="8"/>
+  <text class="t" x="656" y="149">Notion</text>
+  <rect class="store" x="640" y="182" width="220" height="56" rx="8"/>
+  <text class="t" x="656" y="215">Gmail, Calendar, Drive</text>
+  <rect class="store" x="640" y="248" width="220" height="56" rx="8"/>
+  <text class="t" x="656" y="281">Garmin</text>
+
+  <path class="e" d="M280,175 L336,175"/>
+  <path class="e" d="M580,144 L636,144"/>
+  <path class="e" d="M580,210 L636,210"/>
+  <path class="e" d="M580,276 L636,276"/>
+
+  <line x1="40" y1="338" x2="860" y2="338" stroke="#e6e2da"/>
+  <text class="lane" x="40" y="366">PUBLIC REPOSITORY</text>
+  <text class="s" x="40" y="388">Tools, skills and instructions, written without anything about the user.</text>
+  <rect class="priv" x="520" y="356" width="340" height="88" rx="8"/>
+  <text class="lane" x="536" y="380">IGNORED, NEVER COMMITTED</text>
+  <text class="m" x="536" y="404">.env  user.yaml  user-instructions.md</text>
+  <text class="m" x="536" y="426">private/memory/</text>
+</svg>

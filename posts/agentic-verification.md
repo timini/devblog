@@ -5,6 +5,8 @@ summary: A Claude Code plugin that audits a pytest suite for untested behaviour,
 image: /images/av-h1-scatter.png
 imageAlt: "Tests that run nearly the same lines (blue, coverage Jaccard 0.9 or more) still often catch different mutants"
 links:
+  - label: "Release v0.3.0"
+    url: "https://github.com/timini/agentic-verification/releases/tag/v0.3.0"
   - label: "Paper (PDF)"
     url: "https://github.com/timini/agentic-verification/blob/main/study/paper/agentic-verification-study.pdf"
   - label: "Repository"

@@ -9,6 +9,8 @@ links:
     url: "https://benchmarks.rewirebio.io/"
   - label: "Articles"
     url: "https://rewirebio.io/"
+  - label: "Database source code"
+    url: "https://github.com/rewire-bio/rewire-database"
   - label: "GitHub organisation"
     url: "https://github.com/rewire-bio"
 ---

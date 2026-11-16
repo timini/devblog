@@ -5,6 +5,8 @@ summary: A web app that sends one prompt to models from OpenAI, Anthropic, Googl
 image: /images/ens-review.png
 imageAlt: "The review step in the design: a combined answer, agreement between models, and each model's response below"
 links:
+  - label: "Live app"
+    url: "https://ensemble-app--ensemble-ai-prod.us-central1.hosted.app"
   - label: "Repository"
     url: "https://github.com/timini/ensemble"
 ---

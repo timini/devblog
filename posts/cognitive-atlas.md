@@ -15,20 +15,18 @@ links:
     url: "https://github.com/timini/cognitive-atlas"
 ---
 
-If you ask a language model how far apart two cities are, it gives a plausible number. Ask it for every pair among 100 capitals and you can check whether those numbers describe a consistent world. Cognitive Atlas does that and draws the result.
+Ask a language model how far apart two cities are and you get a plausible number. Ask it about every pair among 100 capitals and you can test whether those numbers fit together into a coherent globe. Cognitive Atlas runs that check and maps what comes back.
 
 ## The study
 
-Gemini 3.5 Flash estimated the distance for every pair of 100 capitals, ten times each, with instructions in English, Arabic and Chinese. That is 148,500 answers.
+Gemini 3.5 Flash estimated the distance between every pair of 100 world capitals, ten times per pair, prompted separately in English, Arabic and Chinese: 148,500 estimates in total.
 
-The individual answers are good. The median estimate for each pair is off by about 216 to 234 km on average, and the ranking of distances is almost perfect (Spearman correlation above 0.998).
-
-The world they describe is not consistent, though. Between 10.7% and 13.3% of city triples break the triangle inequality, meaning the model says A to C is longer than going via B.
+Pair by pair, the numbers are strong. Median estimates miss the true distance by 216 to 234 km on average, and the distance rankings are nearly exact (Spearman correlation above 0.998). Taken together, though, they don't describe a valid geometry: between 10.7% and 13.3% of city triples violate the triangle inequality, putting the direct route from A to C further apart than going via B.
 
 ## The maps
 
 ![Fitted capitals against their real positions for English, Arabic and Chinese instructions](/images/atlas-reconstructed-worlds.png)
 
-Fitting the answers to a sphere puts capitals about 150 to 158 km from their real positions on average. The maps from different instruction languages differ by 81 to 88 km per capital. I expected the model to be more accurate about Arab capitals when asked in Arabic, or about Beijing when asked in Chinese, and found no sign of either.
+Projecting the distance matrix onto a sphere lands capitals within 150 to 158 km of their true locations on average, while switching the prompt language shifts the reconstructed map by 81 to 88 km per city. I expected prompts in Arabic to place Arab capitals more accurately, and Chinese prompts to do the same around Beijing; neither showed up.
 
-The atlas lets you explore this directly: warped coastlines, displacement arrows, error layers and a tool for inspecting any pair. The paper sets out the limits, including that it covers one model, one translation per language and one collection period.
+The live site lets you inspect the distortions directly, with warped coastlines, displacement vectors, error overlays and a pair inspector. The paper covers the caveats: a single model, one translation per language and one sampling window.

@@ -13,17 +13,17 @@ links:
     url: "https://github.com/timini/wiggleroom"
 ---
 
-Wiggle Room is a set of modules for [VCV Rack 2](https://vcvrack.com/), the free virtual modular synthesiser. Most of the sound-generating modules use [Faust](https://faust.grame.fr/) for physical modelling DSP. The current release is 2.1.3 and has 45 modules.
+Wiggle Room is a collection of modules for [VCV Rack 2](https://vcvrack.com/), the open-source virtual modular synthesiser. Most of the sound generators are written in [Faust](https://faust.grame.fr/) using physical-modelling DSP. Release 2.1.3 packs 45 modules.
 
 ## Some highlights
 
-**Physical models.** SpaceCello is a digital version of the Yaybahar, a bowed string coupled to spring reverbs. TheAbyss is based on the waterphone. Matter models a struck solid inside a resonant tube and morphs from strings to bells. There are also a plucked string, a struck bar, a shaker, a flute and a vocal choir.
+**Physical models.** SpaceCello is a digital take on the Yaybahar, coupling a bowed string to spring reverbs. TheAbyss models a waterphone, while Matter puts a struck resonator inside a tube to morph continuously from strings to bells. Other voices cover plucked strings, struck bars, a shaker, a flute and a vocal choir.
 
-**Acid.** ACID9Voice is a TB-303 inspired voice with a morphing oscillator, and ACID9Seq is its companion sequencer.
+**Acid.** ACID9Voice is a TB-303-inspired voice with a morphing oscillator, and ACID9Seq is its companion sequencer.
 
-**Rhythm.** EucSeq is a four-channel Euclidean sequencer that chains into Logic Mangler (a truth-table logic processor), EucMix and EucBank for pattern storage. There are two and three channel versions of the chain for smaller patches. Cycloid is a polar Euclidean sequencer and GravityClock generates triggers from a bouncing ball.
+**Rhythm.** EucSeq is a four-channel Euclidean sequencer that chains into Logic Mangler (a truth-table logic processor), EucMix and EucBank for pattern storage. There are two- and three-channel versions of the chain for smaller patches. Cycloid is a polar Euclidean sequencer and GravityClock generates triggers from a bouncing ball.
 
-**Effects and utilities.** A Zita reverb, a tape echo, a wavefolder, a ladder filter, a BBD string ensemble, an 8-channel LFO and a quantiser and chord machine. PixelProbe samples colours from an image using X/Y CV and outputs hue, saturation and intensity.
+**Effects and utilities.** Includes a Zita reverb, tape echo, wavefolder, ladder filter, BBD string ensemble, 8-channel LFO, and a combined quantiser and chord generator. PixelProbe scans a loaded image via X/Y CV and outputs hue, saturation and intensity.
 
 ## Install
 

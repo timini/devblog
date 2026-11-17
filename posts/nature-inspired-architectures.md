@@ -1,5 +1,5 @@
 ---
-title: Software patterns from biology
+title: "Nature-Inspired Architectures: software patterns from biology"
 date: 2026-10-13
 kind: "Pattern catalogue"
 status: "Live"
@@ -9,7 +9,7 @@ imageAlt: "The integral feedback pattern"
 links:
   - label: "Browse the catalogue"
     url: "https://timini.github.io/nature-inspired-architectures/"
-  - label: "Pattern catalogue"
+  - label: "Catalogue on GitHub"
     url: "https://github.com/timini/nature-inspired-architectures#pattern-catalogue"
   - label: "Repository"
     url: "https://github.com/timini/nature-inspired-architectures"
@@ -19,7 +19,7 @@ Evolution has had a long time to solve coordination problems at the scale of mol
 
 ## The patterns
 
-There are eight so far. A few examples:
+Eight patterns are written up so far, including:
 
 - **Bounded compartments**, from cellular compartmentalisation: contain overload so billing keeps working while analytics rejects work.
 - **Bow-tie core**, from metabolism: many inputs and outputs meet at a small shared core, which cuts down pairwise integrations.
@@ -39,7 +39,7 @@ And quorum signalling, where a decaying shared signal decides whether workers jo
 
 ## Keeping it honest
 
-The catalogue separates three things: what has been observed in biology, explanations of how it evolved, and the engineering hypothesis. A good analogy is a reason to run a test, not proof that a design is right. Each pattern also says what would need to change for real deployment. For example, the quorum example does not implement consensus.
+Each entry separates three layers that are easy to blur: empirical findings in biology, evolutionary explanations for them, and the software engineering hypothesis they suggest. A neat biological parallel is an excuse to run a benchmark, not evidence that an architecture works. Every write-up also spells out what production use would still require; the quorum-signalling script, for instance, coordinates optional background work rather than implementing fault-tolerant consensus.
 
 The examples use only the Python standard library and need no setup:
 

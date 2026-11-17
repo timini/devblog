@@ -3,7 +3,7 @@ title: "drill-me: a Claude Code tutor that quizzes you"
 date: 2026-09-23
 kind: "Claude Code plugin"
 status: "Released"
-summary: A plugin that turns Claude into a tutor with spaced repetition and a memory of what you got wrong. Version 1.0.1 is out.
+summary: Turns Claude into a spaced-repetition tutor that quizzes you before explaining and remembers what you missed across sessions.
 image: /images/drill-session.png
 imageAlt: "A session: Claude asks before it explains, then checks how confident you are"
 links:
@@ -13,7 +13,7 @@ links:
     url: "https://github.com/timini/drill-me"
 ---
 
-Chat assistants usually explain things at length. That is a poor way to learn. drill-me makes Claude do the opposite: it asks before it explains, one question at a time, and remembers what you struggled with across sessions.
+Chat assistants default to explaining things at length, which is a forgettable way to learn. `drill-me` flips the script: Claude asks before it explains, one question at a time, and keeps track of what tripped you up across sessions.
 
 ```text
 /drill:me rust lifetimes
@@ -32,7 +32,7 @@ Each rule comes from learning research:
 - **Keep it short.** No more than 150 words at a time.
 - **Ask for confidence before revealing the answer.** Errors you were confident about are the easiest to correct.
 
-It can drill you on general topics, on a document or URL, or on your own codebase. For code, it reads the repo first and anchors every question to real file and line references, which helps when onboarding to an unfamiliar service.
+It can quiz you on a general subject, a local file or URL, or your own repository. On a codebase, it reads the source first and ties every question to concrete file and line references, which makes it handy when getting up to speed on an unfamiliar service.
 
 Progress is stored as plain Markdown in `~/.drill-me/`, so you can read and edit it. The next session starts with whatever is due, weakest cards first.
 

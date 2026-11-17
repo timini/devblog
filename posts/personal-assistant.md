@@ -3,7 +3,7 @@ title: "Personal Assistant: a toolkit that turns a coding agent into a PA"
 date: 2026-11-15
 kind: "Agent toolkit"
 status: "Released"
-summary: Small command-line tools for Notion, Gmail, Calendar, Drive and Garmin, plus skills for the daily routine, so Claude Code or Codex can run my tasks, inbox and diary from the terminal.
+summary: Small CLI tools for Notion, Gmail, Calendar, Drive and Garmin, paired with daily-routine skills so Claude Code or Codex can manage tasks, mail and schedule from the terminal.
 image: /images/pa-layers.svg
 imageAlt: "Skills in Claude Code or Codex call small command-line tools, which talk to Notion, Google and Garmin. Personal context stays in ignored files."
 links:
@@ -13,7 +13,7 @@ links:
     url: "https://github.com/timini/personal-assistant"
 ---
 
-Coding agents are already good at reading output, running commands and keeping at a task until it is done. That is most of what a personal assistant does. What they lack is access to the places my life is kept, and a memory of what happened yesterday. This toolkit gives them both.
+Coding agents already know how to read command output, chain tools together and stick with a job until it's finished, which is most of what a personal assistant has to do. What they lack is access to where your tasks, inbox and calendar live, plus any memory of yesterday. Personal Assistant supplies both.
 
 ## Tools, not servers
 
@@ -27,11 +27,11 @@ uv run pa-google calendar --days 7
 uv run pa-health day
 ```
 
-There are no MCP servers to run or keep connected. A tool is a package with a command, so adding one means dropping in a new package, and every command can print JSON when the agent wants structured output. The same tools work in Claude Code and Codex.
+There are no background MCP daemons to babysit. Each integration is a standalone package with a CLI entry point, so adding a service means dropping another package into the workspace, and every command takes a JSON flag when the agent wants structured data. The exact same commands work under Claude Code and Codex.
 
 ## Memory and routines
 
-Every session starts with `pa-core memory brief`. The memory is a set of plain files holding preferences, lessons, people, facts, projects and open follow-ups, and the brief shows what is due, what was learned and what happened recently. Because it is files and a command, both harnesses share it.
+Every session opens with `pa-core memory brief`. Memory lives in plain text files covering preferences, lessons, people, facts, active projects and open follow-ups; the brief surfaces what's due, what changed recently and what to watch out for. Because it's just files behind a CLI, both agent harnesses share one brain.
 
 On top of the tools sit skills that describe the routines:
 
@@ -44,6 +44,6 @@ On top of the tools sit skills that describe the routines:
 
 ## Public tools, private life
 
-An assistant like this is only useful if it knows a lot about you, and the repository is public. The rule is that every tracked file must read as if it could be anyone's. Tools, skills and instructions describe general behaviour with made-up examples. Everything personal, from contacts and household rules to credentials and the memory itself, lives in ignored files that are never committed: `.env`, `user.yaml`, `user-instructions.md` and the `private/` folder. Personal files are backed up to Google Drive instead.
+An assistant like this is only useful if it knows plenty about your life, yet the code repository is public. The rule is that every tracked file must read as if it belonged to a stranger: tools, skills and prompts use generic examples, while everything personal (contacts, household notes, tokens and the memory files themselves) lives in gitignored paths (`.env`, `user.yaml`, `user-instructions.md` and `private/`) backed up separately to Google Drive.
 
-The rule paid for itself early. The repository's earlier history had personal details in it, so the public version starts from a clean snapshot.
+That boundary paid off early: initial local commits still had personal details mixed in, so the public repository starts from a scrubbed snapshot.

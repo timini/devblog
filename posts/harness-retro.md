@@ -3,7 +3,7 @@ title: "Harness Retro: a retrospective for Claude Code"
 date: 2026-11-03
 kind: "Claude Code plugin"
 status: "Released"
-summary: A Claude Code plugin that reads your past sessions, finds where Claude kept getting it wrong, and proposes changes to CLAUDE.md, memory, hooks and skills so it stops.
+summary: A Claude Code plugin that mines your session transcripts for repeated friction and proposes targeted fixes to CLAUDE.md, memory, hooks and skills.
 image: /images/hr-loop.svg
 imageAlt: "Transcripts are mined locally into a short ranked summary. Claude groups the hits into patterns, checks the existing setup, and proposes fixes for you to approve."
 links:
@@ -13,9 +13,9 @@ links:
     url: "https://github.com/timini/harness-retro"
 ---
 
-When Claude Code gets something wrong, I correct it and move on. A week later it makes the same mistake in a new session, because nothing in its setup changed. The correction stayed in one conversation.
+When Claude Code gets something wrong, I usually correct it in chat and move on. A week later it makes the exact same mistake in a fresh session because nothing in its setup changed.
 
-Those corrections are not lost, though. Claude Code saves every session as a transcript under `~/.claude/projects`. Each "no, I said...", each interrupted turn and each retry of the same failing command is in there. Harness Retro reads them and turns the repeated ones into changes to the harness: the CLAUDE.md files, memory, hooks, settings and skills that shape what Claude does.
+Those corrections are still on disk, though. Claude Code logs every session under `~/.claude/projects`, complete with every "no, I said...", every interrupted turn and every loop of failing commands. Harness Retro mines those transcripts and turns recurring trouble into concrete changes to your harness: the `CLAUDE.md` rules, memory files, hooks, settings and skills that govern how Claude behaves.
 
 ## What it does
 
@@ -31,7 +31,7 @@ A small Python script mines the transcripts for one project. It uses only the st
 
 For each hit it keeps a short excerpt: what you asked, Claude's last few actions, and how you reacted. It redacts API keys and ranks the hits. The summary stays under about 40 KB, even when the transcripts run to hundreds of megabytes.
 
-Then the skill hands that summary to Claude. Claude throws out the false positives and groups the rest into patterns, each with one root cause. Then it reads your existing setup before proposing anything. If a pattern comes from a rule that already exists and was ignored, writing the rule a second time won't help. The fix has to be something stronger, such as a hook that checks it or a skill step that verifies it.
+The skill then hands that digest to Claude, which drops false positives, groups what remains by root cause, and reads your current configuration before suggesting anything. If a mistake happened despite an existing `CLAUDE.md` rule, repeating the rule in bolder type won't help; it escalates to a deterministic hook or an explicit verification step in a skill.
 
 For each pattern it picks the lightest fix that will work:
 
@@ -44,11 +44,11 @@ You see the evidence and the exact change, and nothing is written until you appr
 
 ## What I learned building it
 
-The first run on my own projects picked up the complaints I had already turned into memory entries by hand, such as Claude generating new images instead of using an approved asset library. That was the check I wanted: the script finds what I had to notice for myself. It also found patterns I hadn't written down yet.
+Running it on my own repos immediately surfaced the annoyances I had already written into memory by hand, such as Claude generating placeholder images instead of pulling from an approved asset folder. That confirmed the detector was catching real friction, and it turned up a few habits I hadn't noticed yet.
 
-It also showed a limit I didn't know about. Most of my history had gone. Claude Code deletes transcripts after 30 days by default, so only a handful of main sessions were left, and most of the disk space was subagent logs. If you want retros over a longer period, raise `cleanupPeriodDays` in your settings now.
+Building it also exposed a catch: most of my history was already gone. Claude Code purges transcripts after 30 days by default, leaving only recent main sessions alongside a pile of subagent logs. If you want longer retrospectives, raise `cleanupPeriodDays` in your settings early.
 
-Two smaller lessons. A naive filter counts messages from other Claude sessions in an agent team as you correcting Claude, so the script now skips them. And the regexes are deliberately loose. Recall matters more in the script, because Claude does the precision step with the context in front of it.
+Two smaller implementation details mattered. Messages from peer Claude instances in an agent team look a lot like user pushback to a naive parser, so the script filters those out. And the regexes stay deliberately loose: high recall in the Python pass is fine because Claude handles precision with the surrounding turns in front of it.
 
 ## Install
 

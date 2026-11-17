@@ -19,13 +19,13 @@ links:
 
 Picking a machine learning model for a biology task is harder than it should be. Results are spread across papers, preprints and benchmark suites. Each uses its own datasets, splits and metrics, so numbers from two papers often cannot be compared, and new models appear faster than anyone can read about them.
 
-Rewire Bio is my attempt to fix that. It has three parts.
+Rewire Bio tackles that across a structured benchmark database, reproducible open baselines and critical paper reviews.
 
 ## The benchmark database
 
 [benchmarks.rewirebio.io](https://benchmarks.rewirebio.io/) collects published and reproduced results and organises them around 28 use cases, so you start from the biological question rather than a model name. Every value links to the paper, table or run it came from. Results measured under different protocols are kept apart instead of being merged into one ranking, and where the evidence for a use case is thin, the page says so.
 
-The data lives in a separate public repository with a written procedure for searching, extracting and independently reviewing each value, and immutable releases. AI agents can query it directly through an MCP server.
+The underlying records live in a public repository with immutable releases and a written protocol for finding, extracting and independently checking every figure. AI agents can query the graph directly through an MCP server.
 
 ## Open benchmarks
 
@@ -43,4 +43,4 @@ When I find a mistake, the correction is published next to the original. The MFA
 
 ## Tools for agents
 
-Two MCP servers came out of this work. [genomics-mcp](/genomics-mcp/) lets an AI assistant find public genomic datasets, read a bounded region from archive or local files, and look up variants and genes, with the source of every result. [rdf-kg-mcp](https://github.com/rewire-bio/rdf-kg-mcp) serves a versioned RDF knowledge graph read-only, which is how the benchmark database is exposed to agents.
+Two standalone MCP servers grew out of the platform. [genomics-mcp](/genomics-mcp/) lets an AI assistant discover public genomic datasets, read bounded slices of remote or local files, and look up variants and genes while tracking the provenance of every value. [rdf-kg-mcp](https://github.com/rewire-bio/rdf-kg-mcp) exposes a versioned RDF knowledge graph read-only, which is how agents query the benchmark database.

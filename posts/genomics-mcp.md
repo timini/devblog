@@ -15,9 +15,9 @@ links:
     url: "https://github.com/rewire-bio/genomics-mcp"
 ---
 
-Ask an AI assistant about a genomic region and it will usually answer from memory. I wanted it to answer from the data: open the actual ENCODE file, read the 1 kb window in question, and say exactly which file and version the number came from.
+Ask an AI assistant about a genomic locus and it will usually answer from training memory. I wanted it to look at the primary data instead: open the actual ENCODE track, read the 1 kb window in question, and cite the exact file and version the number came from.
 
-Genomics MCP is a local [Model Context Protocol](https://modelcontextprotocol.io) server that makes that possible. Version 0.1.0 is released and listed on the MCP Registry.
+Genomics MCP is a local [Model Context Protocol](https://modelcontextprotocol.io) server built for that job. Version 0.1.0 is out and listed on the MCP Registry.
 
 ## What an agent can do with it
 
@@ -35,9 +35,9 @@ Where a file supports range requests, a region is read without downloading the f
 
 Every result says whether it is complete, partial or an error, which sources were consulted, and what was truncated. An unexpected failure is reported as an error, never as an empty result. Coordinates always come with an explicit assembly, and nothing is silently converted between assemblies.
 
-Queries are bounded by default: 1 Mb regions, 1 MiB responses and a 30 second deadline. Local reads are limited to folders you allow, source files are never modified, and ambient AWS credentials are never used.
+Queries are bounded by default to 1 Mb regions, 1 MiB responses and a 30-second deadline. Local reads stay inside directories you explicitly allow, source files are never modified, and ambient AWS credentials are ignored.
 
-It is a research tool. It retrieves and reports data; it does not call variants or give clinical interpretation.
+The scope is strictly research: retrieving and reporting data, never calling variants or offering clinical interpretation.
 
 ## A test with a real question
 
